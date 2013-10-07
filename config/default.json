@@ -4,5 +4,24 @@
     "user" : "root",
     "password" : "",
     "database" : "weheartit_development"
+  },
+  "search": {
+    "host": "localhost",
+    "port": 9200,
+    "index": {
+      "name": "weheartit",
+      "settings": {
+        "index" : {
+          "analysis" : {
+            "analyzer" : {
+              "snowball" : {
+                "type" : "snowball",
+                "language" : "English"
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
