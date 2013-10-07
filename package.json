@@ -1,0 +1,11 @@
+{
+  "name": "whi-node-elasticsearch",
+  "version": "0.0.0",
+  "description": "add collections to elasticsearch",
+  "main": "updater.js",
+  "scripts": {
+    "test": "bin/test"
+  },
+  "author": "Dan McAulay",
+  "license": "BSD-2-Clause"
+}
