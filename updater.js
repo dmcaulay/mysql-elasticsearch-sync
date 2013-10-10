@@ -1,11 +1,10 @@
 var config = require('config');
-var nextChunk = require('./lib/entrySets');
+require('node-elasticsearch').config(config.search);
+var updateEntrySets = require('./lib/entrySet').nextChunk;
 
 // setup elasticsearch
 require('node-elasticsearch').config(config.search);
 
-var chunkComplete = function(err) {
+updateEntrySets(function(err) {
   console.log('done','error',err);
-};
-
-nextChunk(chunkComplete);
+});
